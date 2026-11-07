@@ -162,9 +162,8 @@ the left half are selected first.
 
 ### Test Environment
 
-- Operating system: [Enter your operating system]
-- Processor: [Enter your processor]
-- Python version: [Enter the output of py --version]
+- Operating system: OS
+- Python version: Python 3.14.7
 
 ### Input Sizes
 
@@ -174,12 +173,12 @@ The sorting algorithms were tested with:
 
 ### Input Distributions
 
-| Distribution | Description |
-|---|---|
-| Random | Random integers from 0 through n - 1 |
-| Sorted | Distinct integers in ascending order |
-| Reverse | Distinct integers in descending order |
-| Repeated | Random integers from 0 through 9 |
+| Distribution | Description                           |
+| ------------ | ------------------------------------- |
+| Random       | Random integers from 0 through n - 1  |
+| Sorted       | Distinct integers in ascending order  |
+| Reverse      | Distinct integers in descending order |
+| Repeated     | Random integers from 0 through 9      |
 
 The random distribution can contain duplicates. The
 repeated distribution contains at most ten distinct values.
@@ -214,24 +213,24 @@ All values are median running times in seconds, rounded
 to seven decimal places. Lower values indicate faster
 execution.
 
-| Input type | Size | Heapsort | Quicksort | Merge Sort |
-|---|---:|---:|---:|---:|
-| Random | 100 | 0.0001089 | 0.0000948 | 0.0001304 |
-| Random | 500 | 0.0007939 | 0.0006280 | 0.0010325 |
-| Random | 1000 | 0.0018215 | 0.0013769 | 0.0020811 |
-| Random | 2000 | 0.0050055 | 0.0032563 | 0.0051807 |
-| Sorted | 100 | 0.0001123 | 0.0001036 | 0.0001161 |
-| Sorted | 500 | 0.0007955 | 0.0006790 | 0.0008129 |
-| Sorted | 1000 | 0.0021220 | 0.0021876 | 0.0023342 |
-| Sorted | 2000 | 0.0043015 | 0.0035100 | 0.0043143 |
-| Reverse | 100 | 0.0000940 | 0.0001057 | 0.0001170 |
-| Reverse | 500 | 0.0007774 | 0.0007075 | 0.0008047 |
-| Reverse | 1000 | 0.0016212 | 0.0017626 | 0.0021222 |
-| Reverse | 2000 | 0.0043253 | 0.0038585 | 0.0043639 |
-| Repeated | 100 | 0.0001024 | 0.0000335 | 0.0001270 |
-| Repeated | 500 | 0.0006805 | 0.0001624 | 0.0008549 |
-| Repeated | 1000 | 0.0017794 | 0.0003980 | 0.0025853 |
-| Repeated | 2000 | 0.0046307 | 0.0008368 | 0.0055696 |
+| Input type | Size |  Heapsort | Quicksort | Merge Sort |
+| ---------- | ---: | --------: | --------: | ---------: |
+| Random     |  100 | 0.0001089 | 0.0000948 |  0.0001304 |
+| Random     |  500 | 0.0007939 | 0.0006280 |  0.0010325 |
+| Random     | 1000 | 0.0018215 | 0.0013769 |  0.0020811 |
+| Random     | 2000 | 0.0050055 | 0.0032563 |  0.0051807 |
+| Sorted     |  100 | 0.0001123 | 0.0001036 |  0.0001161 |
+| Sorted     |  500 | 0.0007955 | 0.0006790 |  0.0008129 |
+| Sorted     | 1000 | 0.0021220 | 0.0021876 |  0.0023342 |
+| Sorted     | 2000 | 0.0043015 | 0.0035100 |  0.0043143 |
+| Reverse    |  100 | 0.0000940 | 0.0001057 |  0.0001170 |
+| Reverse    |  500 | 0.0007774 | 0.0007075 |  0.0008047 |
+| Reverse    | 1000 | 0.0016212 | 0.0017626 |  0.0021222 |
+| Reverse    | 2000 | 0.0043253 | 0.0038585 |  0.0043639 |
+| Repeated   |  100 | 0.0001024 | 0.0000335 |  0.0001270 |
+| Repeated   |  500 | 0.0006805 | 0.0001624 |  0.0008549 |
+| Repeated   | 1000 | 0.0017794 | 0.0003980 |  0.0025853 |
+| Repeated   | 2000 | 0.0046307 | 0.0008368 |  0.0055696 |
 
 ### Random Inputs
 
@@ -460,22 +459,22 @@ not determine selection order.
 Times are expressed in arbitrary simulation units.
 
 | Task | Priority | Arrival | Duration | Deadline |
-|---|---:|---:|---:|---:|
-| T1 | 2 | 0 | 4 | 6 |
-| T2 | 5 | 1 | 3 | 5 |
-| T3 | 3 | 2 | 2 | 10 |
-| T4 | 4 | 4 | 1 | 8 |
-| T5 | 1 | 6 | 2 | 15 |
+| ---- | -------: | ------: | -------: | -------: |
+| T1   |        2 |       0 |        4 |        6 |
+| T2   |        5 |       1 |        3 |        5 |
+| T3   |        3 |       2 |        2 |       10 |
+| T4   |        4 |       4 |        1 |        8 |
+| T5   |        1 |       6 |        2 |       15 |
 
 ### Scheduling Results
 
 | Task | Start | Finish | Waiting | Turnaround | Tardiness | Deadline met |
-|---|---:|---:|---:|---:|---:|---|
-| T1 | 0 | 4 | 0 | 4 | 0 | Yes |
-| T2 | 4 | 7 | 3 | 6 | 2 | No |
-| T4 | 7 | 8 | 3 | 4 | 0 | Yes |
-| T3 | 8 | 10 | 6 | 8 | 0 | Yes |
-| T5 | 10 | 12 | 4 | 6 | 0 | Yes |
+| ---- | ----: | -----: | ------: | ---------: | --------: | ------------ |
+| T1   |     0 |      4 |       0 |          4 |         0 | Yes          |
+| T2   |     4 |      7 |       3 |          6 |         2 | No           |
+| T4   |     7 |      8 |       3 |          4 |         0 | Yes          |
+| T3   |     8 |     10 |       6 |          8 |         0 | Yes          |
+| T5   |    10 |     12 |       4 |          6 |         0 | Yes          |
 
 Execution order:
 
@@ -601,4 +600,3 @@ The scheduler produced an average waiting time of
 3.20 units and an average turnaround time of 5.60 units.
 One task missed its deadline, demonstrating a limitation
 of non-preemptive priority scheduling.
-
